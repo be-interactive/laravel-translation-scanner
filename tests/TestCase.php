@@ -1,10 +1,10 @@
 <?php
 
-namespace Martijn Laffort\TranslationScanner\Tests;
+namespace MartijnLaffort\TranslationScanner\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Martijn Laffort\TranslationScanner\TranslationScannerServiceProvider;
+use MartijnLaffort\TranslationScanner\TranslationScannerServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -13,7 +13,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Martijn Laffort\\TranslationScanner\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'MartijnLaffort\\TranslationScanner\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 

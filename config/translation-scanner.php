@@ -1,6 +1,6 @@
 <?php
 
-// config for Martijn Laffort/TranslationScanner
+// config for MartijnLaffort/TranslationScanner
 return [
 
 ];

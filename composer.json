@@ -34,13 +34,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Martijn Laffort\\TranslationScanner\\": "src/",
-            "Martijn Laffort\\TranslationScanner\\Database\\Factories\\": "database/factories/"
+            "MartijnLaffort\\TranslationScanner\\": "src/",
+            "MartijnLaffort\\TranslationScanner\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Martijn Laffort\\TranslationScanner\\Tests\\": "tests/",
+            "MartijnLaffort\\TranslationScanner\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -62,10 +62,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Martijn Laffort\\TranslationScanner\\TranslationScannerServiceProvider"
+                "MartijnLaffort\\TranslationScanner\\TranslationScannerServiceProvider"
             ],
             "aliases": {
-                "TranslationScanner": "Martijn Laffort\\TranslationScanner\\Facades\\TranslationScanner"
+                "TranslationScanner": "MartijnLaffort\\TranslationScanner\\Facades\\TranslationScanner"
             }
         }
     },

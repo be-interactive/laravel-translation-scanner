@@ -1,5 +1,5 @@
 <?php
 
-namespace Martijn Laffort\TranslationScanner;
+namespace MartijnLaffort\TranslationScanner;
 
 class TranslationScanner {}

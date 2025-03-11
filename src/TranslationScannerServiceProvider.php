@@ -1,6 +1,6 @@
 <?php
 
-namespace Martijn Laffort\TranslationScanner;
+namespace MartijnLaffort\TranslationScanner;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;

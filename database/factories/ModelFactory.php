@@ -1,6 +1,6 @@
 <?php
 
-namespace Martijn Laffort\TranslationScanner\Database\Factories;
+namespace MartijnLaffort\TranslationScanner\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
