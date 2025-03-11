@@ -3,8 +3,8 @@
 namespace MartijnLaffort\TranslationScanner\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use MartijnLaffort\TranslationScanner\TranslationScannerServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
