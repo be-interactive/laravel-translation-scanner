@@ -18,10 +18,23 @@ This package uses `spatie/laravel-translation-loader`, publish their migration f
 php artisan vendor:publish --provider="Spatie\TranslationLoader\TranslationServiceProvider" --tag="migrations"
 ```
 
-After this you can run the migration
+You have to update the migration file to the following:
+```php
+Schema::create('language_lines', function (Blueprint $table) {
+    $table->bigIncrements('id');
+    $table->string('group')->index();
+    $table->text('key');
+    $table->json('text');
+    $table->timestamps();
+});
+```
+
+After this you can run the migration:
 ```bash
 php artisan migrate
 ```
+
+If you don't already have a `lang` directory in your repository, create the directory.
 
 You can publish the config file with:
 ```bash

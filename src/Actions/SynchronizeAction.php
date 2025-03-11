@@ -10,16 +10,16 @@ use Symfony\Component\Finder\Finder;
 
 class SynchronizeAction
 {
-    public static function synchronize(?SynchronizeTranslationsCommand $command = null): array
+    public static function synchronize(?SynchronizeTranslationsCommand $command = null, ?bool $filament = null): array
     {
         // Extract all translation groups, keys and text
-        $groupsAndKeys = Scanner::scan();
+        $groupsAndKeys = Scanner::scanTranslationFiles();
 
         // Now we add the JSON translations here
         $groupsAndKeys = array_merge_recursive($groupsAndKeys, self::getJsonTranslationGroupsKeys());
 
         // And now we actually scan the codebase for all translations added
-        $groupsAndKeys = self::scanFiles($groupsAndKeys);
+        $groupsAndKeys = self::scanFiles($groupsAndKeys, $filament);
 
         $result = [];
         $result['total_count'] = 0;
@@ -90,7 +90,7 @@ class SynchronizeAction
         return $translations->values()->toArray();
     }
 
-    private static function scanFiles(array $currentGroupsAndKeys): array
+    private static function scanFiles(array $currentGroupsAndKeys, ?bool $filament = null): array
     {
         $files = Finder::create()
             ->files()
@@ -102,11 +102,16 @@ class SynchronizeAction
         $translations = collect($currentGroupsAndKeys);
 
         foreach ($files as $file) {
+            // todo: Look at the configuration of the scanner
             preg_match_all('/(?:\$t|\btrans|__)\(([\'"])(?\'key\'[^\'"]+?)\1\)/', $file->getContents(), $matches);
 
-            preg_match_all('/([a-zA-Z\\\\]+)::make\(\'([^\']+)\'\)/', $file->getContents(), $matchesTranslate);
+            $allMatches = $matches['key'];
 
-            $allMatches = array_merge($matches['key'], $matchesTranslate[2]);
+            if ($filament) {
+                preg_match_all('/([a-zA-Z\\\\]+)::make\(\'([^\']+)\'\)/', $file->getContents(), $matchesTranslate);
+
+                $allMatches = array_merge($matches['key'], $matchesTranslate[2]);
+            }
 
             foreach ($allMatches as $key) {
                 if (str($key)->contains('::')) {

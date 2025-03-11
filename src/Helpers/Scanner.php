@@ -16,7 +16,7 @@ class Scanner
      *
      * @return array An array containing all translation groups and keys found in the application.
      */
-    public static function scan(): array
+    public static function scanTranslationFiles(): array
     {
         $files = File::allFiles(lang_path());
 
