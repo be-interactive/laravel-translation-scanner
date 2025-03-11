@@ -48,9 +48,14 @@ return [
 ```
 
 ## Usage
+Using the scanFiles() function, the package will scan all php files and add the basic translations to the language_lines database table.
 ```php
-$translationScanner = new BeInteractive\TranslationScanner();
-echo $translationScanner->echoPhrase('Hello, BE!');
+\BeInteractive\TranslationScanner\Facades\TranslationScanner::scanFiles();
+```
+
+You can add options to further improve your scan based on your needs:
+```php
+\BeInteractive\TranslationScanner\Facades\TranslationScanner::filament->scanFiles();
 ```
 
 ## Changelog
