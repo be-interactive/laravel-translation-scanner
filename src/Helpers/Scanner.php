@@ -55,7 +55,7 @@ class Scanner
     private static function parseTranslation(array $translationArray, string $locale, string $groupName, ?string $parentKey = null): void
     {
         foreach ($translationArray as $key => $value) {
-            $currentKey = $parentKey ? $parentKey . '.' . $key : $key;
+            $currentKey = $parentKey ? $parentKey.'.'.$key : $key;
 
             if (is_array($value)) {
                 self::parseTranslation($value, $locale, $groupName, $currentKey);

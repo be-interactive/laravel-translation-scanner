@@ -38,12 +38,12 @@ class SynchronizeTranslationsCommand extends Command
         $this->newLine();
 
         $this->components->bulletList([
-            'synced translations: ' . $result['total_count'],
-            'purged translations: ' . $result['deleted_count'],
+            'synced translations: '.$result['total_count'],
+            'purged translations: '.$result['deleted_count'],
         ]);
         $this->newLine();
 
         $runTime = number_format((microtime(true) - $startTime) * 1000, 0);
-        $this->components->info('Synchronization success! (' . $runTime . 'ms)');
+        $this->components->info('Synchronization success! ('.$runTime.'ms)');
     }
 }

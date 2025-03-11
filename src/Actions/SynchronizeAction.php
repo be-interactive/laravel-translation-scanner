@@ -48,7 +48,7 @@ class SynchronizeAction
                 $result['total_count'] += 1;
 
                 $runTime = number_format((microtime(true) - $startTime) * 1000, 2);
-                $command?->components()->twoColumnDetail($groupAndKey['group'] . '.' . $groupAndKey['key'], "<fg=gray>{$runTime} ms</> <fg=green;options=bold>DONE</>");
+                $command?->components()->twoColumnDetail($groupAndKey['group'].'.'.$groupAndKey['key'], "<fg=gray>{$runTime} ms</> <fg=green;options=bold>DONE</>");
             }
         }
 
