@@ -6,6 +6,6 @@ class TranslationScanner
 {
     public function scanFiles()
     {
-        dd('test');
+        dd('testing');
     }
 }

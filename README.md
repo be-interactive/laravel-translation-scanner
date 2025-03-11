@@ -10,12 +10,16 @@ This is where your description should go. Limit it to a paragraph or two. Consid
 
 You can install the package via composer:
 ```bash
-composer require martijnlaffort/translation-scanner
+composer require be-interactive/laravel-translation-scanner
 ```
 
-You can publish and run the migrations with:
+This package uses `spatie/laravel-translation-loader`, publish their migration file using:
 ```bash
-php artisan vendor:publish --tag="translation-scanner-migrations"
+php artisan vendor:publish --provider="Spatie\TranslationLoader\TranslationServiceProvider" --tag="migrations"
+```
+
+After this you can run the migration
+```bash
 php artisan migrate
 ```
 
@@ -30,20 +34,10 @@ return [
 ];
 ```
 
-Optionally, you can publish the views using
-```bash
-php artisan vendor:publish --tag="translation-scanner-views"
-```
-
 ## Usage
 ```php
 $translationScanner = new BeInteractive\TranslationScanner();
 echo $translationScanner->echoPhrase('Hello, BE!');
-```
-
-## Testing
-```bash
-composer test
 ```
 
 ## Changelog
