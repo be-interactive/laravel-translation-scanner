@@ -1,17 +1,18 @@
 {
-    "name": "martijnlaffort/translation-scanner",
+    "name": "be-interactive/laravel-translation-scanner",
+    "version": "v1.0.0",
     "description": "A package that scans you repo for translations",
     "keywords": [
-        "Martijn Laffort",
+        "BE-Interactive",
         "laravel",
         "translation-scanner"
     ],
-    "homepage": "https://github.com/martijnlaffort/translation-scanner",
+    "homepage": "https://github.com/be-interactive/laravel-translation-scanner",
     "license": "MIT",
     "authors": [
         {
             "name": "Martijn Laffort",
-            "email": "martijn.laffort@hotmail.com",
+            "email": "martijn@be-interactive.nl",
             "role": "Developer"
         }
     ],
@@ -34,13 +35,13 @@
     },
     "autoload": {
         "psr-4": {
-            "MartijnLaffort\\TranslationScanner\\": "src/",
-            "MartijnLaffort\\TranslationScanner\\Database\\Factories\\": "database/factories/"
+            "BeInteractive\\TranslationScanner\\": "src/",
+            "BeInteractive\\TranslationScanner\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "MartijnLaffort\\TranslationScanner\\Tests\\": "tests/",
+            "BeInteractive\\TranslationScanner\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -62,10 +63,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "MartijnLaffort\\TranslationScanner\\TranslationScannerServiceProvider"
+                "BeInteractive\\TranslationScanner\\TranslationScannerServiceProvider"
             ],
             "aliases": {
-                "TranslationScanner": "MartijnLaffort\\TranslationScanner\\Facades\\TranslationScanner"
+                "TranslationScanner": "BeInteractive\\TranslationScanner\\Facades\\TranslationScanner"
             }
         }
     },

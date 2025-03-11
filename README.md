@@ -37,8 +37,8 @@ php artisan vendor:publish --tag="translation-scanner-views"
 
 ## Usage
 ```php
-$translationScanner = new MartijnLaffort\TranslationScanner();
-echo $translationScanner->echoPhrase('Hello, Martijn Laffort!');
+$translationScanner = new BeInteractive\TranslationScanner();
+echo $translationScanner->echoPhrase('Hello, BE!');
 ```
 
 ## Testing

@@ -1,16 +1,16 @@
 <?php
 
-namespace MartijnLaffort\TranslationScanner\Facades;
+namespace BeInteractive\TranslationScanner\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \MartijnLaffort\TranslationScanner\TranslationScanner
+ * @see \BeInteractive\TranslationScanner\TranslationScanner
  */
 class TranslationScanner extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \MartijnLaffort\TranslationScanner\TranslationScanner::class;
+        return \BeInteractive\TranslationScanner\TranslationScanner::class;
     }
 }
