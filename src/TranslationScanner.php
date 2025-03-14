@@ -15,8 +15,8 @@ class TranslationScanner
         return $this;
     }
 
-    public function scanFiles()
+    public function scanFiles(): array
     {
-        SynchronizeAction::synchronize(filament: $this->filament);
+        return SynchronizeAction::synchronize(filament: $this->filament);
     }
 }
