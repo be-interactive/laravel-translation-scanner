@@ -36,17 +36,6 @@ php artisan migrate
 
 If you don't already have a `lang` directory in your repository, create the directory.
 
-You can publish the config file with:
-```bash
-php artisan vendor:publish --tag="translation-scanner-config"
-```
-
-This is the contents of the published config file:
-```php
-return [
-];
-```
-
 ## Usage
 Using the scanFiles() function, the package will scan all php files and add the basic translations to the language_lines database table.
 ```php
