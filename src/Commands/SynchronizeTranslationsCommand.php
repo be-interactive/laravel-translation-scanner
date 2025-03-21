@@ -31,6 +31,9 @@ class SynchronizeTranslationsCommand extends Command
      */
     public function handle(): void
     {
+        // todo
+        return;
+
         $startTime = microtime(true);
         $this->components->info('Starting synchronization.');
 
