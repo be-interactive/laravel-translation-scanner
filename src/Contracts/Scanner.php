@@ -7,5 +7,5 @@ interface Scanner
     /**
      * @return array{group: string, key: string, text: array{string, string}}
      */
-    public static function getLanguageLines(): array;
+    public function getLanguageLines(): array;
 }

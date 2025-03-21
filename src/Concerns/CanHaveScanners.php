@@ -3,8 +3,8 @@
 namespace BeInteractive\TranslationScanner\Concerns;
 
 use BeInteractive\TranslationScanner\Contracts\Scanner;
-use BeInteractive\TranslationScanner\Scanners\Filament;
-use BeInteractive\TranslationScanner\Scanners\Laravel;
+use BeInteractive\TranslationScanner\Scanners\FilamentScanner;
+use BeInteractive\TranslationScanner\Scanners\LaravelScanner;
 
 trait CanHaveScanners
 {
@@ -12,14 +12,14 @@ trait CanHaveScanners
 
     public function laravel(): static
     {
-        $this->scanners[] = new Laravel();
+        $this->scanners[] = new LaravelScanner();
 
         return $this;
     }
 
     public function filament(): static
     {
-        $this->scanners[] = new Filament();
+        $this->scanners[] = new FilamentScanner();
 
         return $this;
     }

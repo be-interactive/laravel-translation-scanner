@@ -5,11 +5,18 @@ namespace BeInteractive\TranslationScanner;
 use BeInteractive\TranslationScanner\Actions\SynchronizeAction;
 use BeInteractive\TranslationScanner\Concerns\CanHaveScanners;
 use BeInteractive\TranslationScanner\Contracts\Scanner;
+use BeInteractive\TranslationScanner\Scanners\TranslationFilesScanner;
 use Illuminate\Support\Arr;
 
 class TranslationScanner
 {
     use CanHaveScanners;
+
+    public function __construct()
+    {
+        $this
+            ->with(new TranslationFilesScanner());
+    }
 
     public function getLanguageLines(): array
     {
@@ -25,6 +32,19 @@ class TranslationScanner
 
         return $languageLines;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     /**
