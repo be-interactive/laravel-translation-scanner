@@ -11,8 +11,8 @@ class TranslationScannerServiceProvider extends PackageServiceProvider
     {
         $package
             ->name('translation-scanner')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_translation_scanner_table');
+//            ->hasConfigFile()
+//            ->hasViews()
+            ->hasMigration('modify_language_lines_table');
     }
 }
