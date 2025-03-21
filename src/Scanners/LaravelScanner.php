@@ -6,7 +6,6 @@ use BeInteractive\TranslationScanner\Contracts\Scanner;
 
 class LaravelScanner implements Scanner
 {
-
     /**
      * @return array{group: string, key: string, text: array{string, string}}
      */

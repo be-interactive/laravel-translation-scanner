@@ -6,7 +6,6 @@ use BeInteractive\TranslationScanner\Contracts\Scanner;
 
 class FilamentScanner implements Scanner
 {
-
     /**
      * @return array{group: string, key: string, text: array{string, string}}
      */

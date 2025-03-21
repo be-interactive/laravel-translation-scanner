@@ -32,7 +32,6 @@ class RegexScanner implements Scanner
         ];
     }
 
-
     /**
      * @return array{group: string, key: string, text: array{string, string}}
      */

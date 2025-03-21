@@ -15,7 +15,7 @@ class TranslationScanner
 
     public function __construct()
     {
-        $this->with(new TranslationFilesScanner());
+        $this->with(new TranslationFilesScanner);
     }
 
     public function getLanguageLines(): array
@@ -73,24 +73,9 @@ class TranslationScanner
         return $result;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
     /**
      * OLD CODE WHICH CAN BE REMOVED LATER:
      */
-
-
-
     protected bool $filament = false;
 
     protected array $regexes = [];

@@ -12,14 +12,14 @@ trait CanHaveScanners
 
     public function laravel(): static
     {
-        $this->scanners[] = new LaravelScanner();
+        $this->scanners[] = new LaravelScanner;
 
         return $this;
     }
 
     public function filament(): static
     {
-        $this->scanners[] = new FilamentScanner();
+        $this->scanners[] = new FilamentScanner;
 
         return $this;
     }
