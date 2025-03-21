@@ -1,11 +1,12 @@
-# A package that scans you repo for translations
+# Laravel Translation Scanner
+This package scans your projects for translations and integrates them into spatie translation loader.
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/martijnlaffort/translation-scanner.svg?style=flat-square)](https://packagist.org/packages/martijnlaffort/translation-scanner)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/martijnlaffort/translation-scanner/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/martijnlaffort/translation-scanner/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/martijnlaffort/translation-scanner/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/martijnlaffort/translation-scanner/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/martijnlaffort/translation-scanner.svg?style=flat-square)](https://packagist.org/packages/martijnlaffort/translation-scanner)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/be-interactive/translation-scanner.svg?style=flat-square)](https://packagist.org/packages/be-interactive/translation-scanner)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/be-interactive/translation-scanner/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/be-interactive/translation-scanner/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/be-interactive/translation-scanner/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/be-interactive/translation-scanner/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/be-interactive/translation-scanner.svg?style=flat-square)](https://packagist.org/packages/be-interactive/translation-scanner)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+
 ## Installation
 
 You can install the package via composer:
@@ -55,7 +56,8 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 - [Martijn Laffort](https://github.com/martijnlaffort)
+- [Timo de Winter](https://github.com/timo-de-winter)
 - [All Contributors](../../contributors)
 
 ## License
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+Please see [License File](LICENSE.md) for more information.
