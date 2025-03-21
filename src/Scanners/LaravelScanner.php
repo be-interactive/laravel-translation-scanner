@@ -12,8 +12,9 @@ class LaravelScanner implements Scanner
      */
     public function getLanguageLines(): array
     {
-        return [
+        $regex = '/(?:\$t|\btrans|__)\(([\'"])(?\'key\'[^\'"]+?)\1\)/';
 
-        ];
+        return (new RegexScanner($regex))
+            ->getLanguageLines();
     }
 }

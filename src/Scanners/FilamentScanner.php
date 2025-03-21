@@ -12,8 +12,9 @@ class FilamentScanner implements Scanner
      */
     public function getLanguageLines(): array
     {
-        return [
+        $regex = '/([a-zA-Z\\\\]+)::make\(\'(?P<key>[^\']+)\'\)/';
 
-        ];
+        return (new RegexScanner($regex))
+            ->getLanguageLines();
     }
 }

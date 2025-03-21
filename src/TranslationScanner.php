@@ -14,8 +14,7 @@ class TranslationScanner
 
     public function __construct()
     {
-        $this
-            ->with(new TranslationFilesScanner());
+        $this->with(new TranslationFilesScanner());
     }
 
     public function getLanguageLines(): array
@@ -24,16 +23,19 @@ class TranslationScanner
 
         /** @var Scanner $scanner */
         foreach ($this->getScanners() as $scanner) {
-            $languageLines = [
-                ...$languageLines,
-                ...$scanner->getLanguageLines(),
-            ];
+            $languageLines = array_merge_recursive(
+                $languageLines,
+                $scanner->getLanguageLines(),
+            );
         }
 
         return $languageLines;
     }
 
-
+    public function store(bool $deleteLinesThatWereNotScanned = true)
+    {
+        // todo
+    }
 
 
 
