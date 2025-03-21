@@ -9,25 +9,28 @@ This package scans your projects for translations and integrates them into spati
 
 ## Installation
 
+First you have to add the be-interactive repository.
+```json
+{
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packistry.be-interactive.nl"
+        }
+    ]
+}
+```
+
 You can install the package via composer:
 ```bash
 composer require be-interactive/laravel-translation-scanner
 ```
 
-This package uses `spatie/laravel-translation-loader`, publish their migration file using:
+This package uses `spatie/laravel-translation-loader`, publish their migration and our file using:
 ```bash
+# In this order
 php artisan vendor:publish --provider="Spatie\TranslationLoader\TranslationServiceProvider" --tag="migrations"
-```
-
-You have to update the migration file to the following:
-```php
-Schema::create('language_lines', function (Blueprint $table) {
-    $table->bigIncrements('id');
-    $table->string('group')->index();
-    $table->text('key');
-    $table->json('text');
-    $table->timestamps();
-});
+php artisan vendor:publish --tag="filament-media-library-migrations"
 ```
 
 After this you can run the migration:
@@ -45,14 +48,11 @@ Using the scanFiles() function, the package will scan all php files and add the 
 
 You can add options to further improve your scan based on your needs:
 ```php
-\BeInteractive\TranslationScanner\Facades\TranslationScanner::filament->scanFiles();
+\BeInteractive\TranslationScanner\Facades\TranslationScanner::filament()->scanFiles();
 ```
 
 ## Changelog
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
-
-## Security Vulnerabilities
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
 
 ## Credits
 - [Martijn Laffort](https://github.com/martijnlaffort)
