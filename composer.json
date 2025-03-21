@@ -8,11 +8,16 @@
         "translation-scanner"
     ],
     "homepage": "https://github.com/be-interactive/laravel-translation-scanner",
-    "license": "MIT",
+    "license": "proprietary",
     "authors": [
         {
             "name": "Martijn Laffort",
             "email": "martijn@be-interactive.nl",
+            "role": "Developer"
+        },
+        {
+            "name": "Timo de Winter",
+            "email": "timo@be-interactive.nl",
             "role": "Developer"
         }
     ],
