@@ -2,7 +2,6 @@
 
 namespace BeInteractive\TranslationScanner\Commands;
 
-use BeInteractive\TranslationScanner\Actions\SynchronizeAction;
 use BeInteractive\TranslationScanner\Facades\TranslationScanner;
 use Illuminate\Console\Command;
 
@@ -40,8 +39,8 @@ class SynchronizeTranslationsCommand extends Command
         $this->newLine();
 
         $this->components->bulletList([
-            'synced translations: ' . $storeResult['total_count'],
-            'purged translations: ' . $storeResult['deleted_count'],
+            'synced translations: '.$storeResult['total_count'],
+            'purged translations: '.$storeResult['deleted_count'],
         ]);
 
         $this->newLine();
