@@ -2,8 +2,8 @@
 
 namespace BeInteractive\TranslationScanner\Tests;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
 use BeInteractive\TranslationScanner\TranslationScannerServiceProvider;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
