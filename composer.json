@@ -8,7 +8,7 @@
         "translation-scanner"
     ],
     "homepage": "https://github.com/be-interactive/laravel-translation-scanner",
-    "license": "proprietary",
+    "license": "MIT",
     "authors": [
         {
             "name": "Martijn Laffort",
