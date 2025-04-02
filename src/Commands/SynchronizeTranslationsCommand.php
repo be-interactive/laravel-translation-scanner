@@ -2,7 +2,7 @@
 
 namespace BeInteractive\TranslationScanner\Commands;
 
-use BeInteractive\TranslationScanner\Actions\SynchronizeAction;
+use BeInteractive\TranslationScanner\Facades\TranslationScanner;
 use Illuminate\Console\Command;
 
 class SynchronizeTranslationsCommand extends Command
@@ -12,7 +12,7 @@ class SynchronizeTranslationsCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'translations:synchronize';
+    protected $signature = 'translations:synchronize {filament?}';
 
     /**
      * The console command description.
@@ -21,29 +21,30 @@ class SynchronizeTranslationsCommand extends Command
      */
     protected $description = 'Synchronize all application translations';
 
-    public function components()
-    {
-        return $this->components;
-    }
-
     /**
      * Execute the console command.
      */
     public function handle(): void
     {
-        $startTime = microtime(true);
         $this->components->info('Starting synchronization.');
 
-        $result = SynchronizeAction::synchronize($this);
+        $scanner = TranslationScanner::laravel();
+
+        if ($this->argument('filament')) {
+            $scanner->filament();
+        }
+
+        $storeResult = $scanner->store();
+
         $this->newLine();
 
         $this->components->bulletList([
-            'synced translations: '.$result['total_count'],
-            'purged translations: '.$result['deleted_count'],
+            'synced translations: '.$storeResult['total_count'],
+            'purged translations: '.$storeResult['deleted_count'],
         ]);
+
         $this->newLine();
 
-        $runTime = number_format((microtime(true) - $startTime) * 1000, 0);
-        $this->components->info('Synchronization success! ('.$runTime.'ms)');
+        $this->components->info('Synchronization finished!');
     }
 }
