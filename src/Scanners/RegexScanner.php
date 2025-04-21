@@ -19,10 +19,7 @@ class RegexScanner implements Scanner
     {
         $this->regex = $regex;
 
-        $this->findIn = $findIn ?? [
-            app_path(),
-            resource_path(),
-        ];
+        $this->findIn = $findIn ?? config('translation-scanner.default_search_in_paths');
 
         $this->findPatterns = $findPatterns ?? [
             '*.php',

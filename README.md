@@ -14,6 +14,11 @@ You can install the package via composer:
 composer require be-interactive/laravel-translation-scanner
 ```
 
+You can optionally publish the config file like this:
+```bash
+php artisan vendor:publish --provider="BeInteractive\TranslationScanner\TranslationScannerServiceProvider" --tag="translation-scanner-config"
+```
+
 This package uses `spatie/laravel-translation-loader`, this means you will need to publish both their migrations and ours, in that order:
 ```bash
 # In this order
