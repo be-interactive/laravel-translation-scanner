@@ -24,7 +24,7 @@ class TranslationFilesScanner implements Scanner
 
     private static function fromPhpLangFiles(): array
     {
-        if (!is_dir(lang_path())) {
+        if (! is_dir(lang_path())) {
             return [];
         }
 
@@ -56,7 +56,7 @@ class TranslationFilesScanner implements Scanner
 
     private static function fromJsonLangFiles(): array
     {
-        if (!is_dir(lang_path())) {
+        if (! is_dir(lang_path())) {
             return [];
         }
 
