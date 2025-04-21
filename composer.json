@@ -1,6 +1,6 @@
 {
     "name": "be-interactive/laravel-translation-scanner",
-    "version": "v1.0.0",
+    "version": "v1.0.1",
     "description": "A package that scans you repo for translations",
     "keywords": [
         "BE-Interactive",

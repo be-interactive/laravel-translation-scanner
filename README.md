@@ -17,8 +17,8 @@ composer require be-interactive/laravel-translation-scanner
 This package uses `spatie/laravel-translation-loader`, this means you will need to publish both their migrations and ours, in that order:
 ```bash
 # In this order
-php artisan vendor:publish --provider="Spatie\TranslationLoader\TranslationServiceProvider" --tag="migrations"
-php artisan vendor:publish --tag="filament-media-library-migrations"
+php artisan vendor:publish --provider="Spatie\TranslationLoader\TranslationServiceProvider" --tag="translation-loader-migrations"
+php artisan vendor:publish --provider="BeInteractive\TranslationScanner\TranslationScannerServiceProvider" --tag="translation-scanner-migrations"
 ```
 
 After this you can run the migration:
