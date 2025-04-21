@@ -2,6 +2,14 @@
 
 All notable changes to `translation-scanner` will be documented in this file.
 
+## v1.1.0 - 2025-04-21
+
+### What's Changed
+
+* More control over default search paths by @timo-de-winter in https://github.com/be-interactive/laravel-translation-scanner/pull/4
+
+**Full Changelog**: https://github.com/be-interactive/laravel-translation-scanner/compare/v1.0.3...v1.1.0
+
 ## v1.0.3 - 2025-04-21
 
 **Full Changelog**: https://github.com/be-interactive/laravel-translation-scanner/compare/v1.0.2...v1.0.3
