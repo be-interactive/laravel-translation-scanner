@@ -24,6 +24,10 @@ class TranslationFilesScanner implements Scanner
 
     private static function fromPhpLangFiles(): array
     {
+        if (!is_dir(lang_path())) {
+            return [];
+        }
+
         $files = File::allFiles(lang_path());
 
         // Loop through all groups
@@ -52,6 +56,10 @@ class TranslationFilesScanner implements Scanner
 
     private static function fromJsonLangFiles(): array
     {
+        if (!is_dir(lang_path())) {
+            return [];
+        }
+
         $files = File::allFiles(lang_path());
 
         $translations = collect();
