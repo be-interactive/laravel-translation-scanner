@@ -37,7 +37,7 @@ trait CanHaveScanners
         return $this;
     }
 
-    public function with(Scanner | array $scanner): static
+    public function with(Scanner|array $scanner): static
     {
         $this->scanners = [
             ...$this->scanners,
