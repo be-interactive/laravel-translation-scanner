@@ -6,6 +6,7 @@ use BeInteractive\TranslationScanner\Contracts\Scanner;
 use BeInteractive\TranslationScanner\Scanners\FilamentScanner;
 use BeInteractive\TranslationScanner\Scanners\LaravelScanner;
 use BeInteractive\TranslationScanner\Scanners\RegexScanner;
+use Illuminate\Support\Arr;
 
 trait CanHaveScanners
 {
@@ -36,9 +37,12 @@ trait CanHaveScanners
         return $this;
     }
 
-    public function with(Scanner $scanner): static
+    public function with(Scanner|array $scanner): static
     {
-        $this->scanners[] = $scanner;
+        $this->scanners = [
+            ...$this->scanners,
+            ...Arr::wrap($scanner),
+        ];
 
         return $this;
     }
