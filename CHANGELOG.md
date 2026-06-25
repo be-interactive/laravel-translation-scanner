@@ -2,6 +2,14 @@
 
 All notable changes to `translation-scanner` will be documented in this file.
 
+## v5.0.0 - 2026-06-25
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 2.4.0 to 2.5.0 by @dependabot[bot] in https://github.com/be-interactive/laravel-translation-scanner/pull/13
+
+**Full Changelog**: https://github.com/be-interactive/laravel-translation-scanner/compare/v1.2.0...v5.0.0
+
 ## v1.1.1 - 2025-05-15
 
 ### What's Changed
