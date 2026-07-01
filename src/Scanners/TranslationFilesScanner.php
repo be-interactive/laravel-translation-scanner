@@ -16,13 +16,17 @@ class TranslationFilesScanner implements Scanner
      */
     public function getLanguageLines(): array
     {
+        // Reset the accumulator so each scan builds a fresh result and never
+        // resurrects stale keys from a previous scan on a long-lived worker.
+        $this->allGroupsAndKeys = [];
+
         return array_merge_recursive(
-            self::fromPhpLangFiles(),
-            self::fromJsonLangFiles(),
+            $this->fromPhpLangFiles(),
+            $this->fromJsonLangFiles(),
         );
     }
 
-    private static function fromPhpLangFiles(): array
+    private function fromPhpLangFiles(): array
     {
         if (! is_dir(lang_path())) {
             return [];
@@ -48,13 +52,13 @@ class TranslationFilesScanner implements Scanner
             $groupName = $file->getFilenameWithoutExtension();
 
             // Load the data from the file
-            self::parseTranslation(require $file, $nameParts[0], $groupName);
+            $this->parseTranslation(require $file, $nameParts[0], $groupName);
         }
 
-        return self::$allGroupsAndKeys;
+        return $this->allGroupsAndKeys;
     }
 
-    private static function fromJsonLangFiles(): array
+    private function fromJsonLangFiles(): array
     {
         if (! is_dir(lang_path())) {
             return [];

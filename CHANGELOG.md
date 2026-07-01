@@ -2,10 +2,6 @@
 
 All notable changes to `translation-scanner` will be documented in this file.
 
-## v5.0.2 - 2026-07-01
-
-**Full Changelog**: https://github.com/be-interactive/laravel-translation-scanner/compare/v5.0.1...v5.0.2
-
 ## v1.1.1 - 2025-05-15
 
 ### What's Changed
